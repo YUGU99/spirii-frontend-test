@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styles */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: white;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @apply m-0 flex items-center justify-center min-w-[320px] min-h-screen bg-[#FFFFFF] text-black;
+}
+
+h1 {
+  @apply text-4xl leading-tight font-bold mb-6;
+}
+
+a {
+  @apply font-medium text-[#646cff] no-underline;
+}
+
+a:hover {
+  @apply text-[#535bf2];
+}
+
+

@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  @apply max-w-screen-xl mx-auto p-8 text-center;
+}
+
+.card {
+  @apply p-8;
+}
+
+.read-the-docs {
+  @apply text-gray-400;
+}
+
+@media {
+  #root {
+    @apply p-4;
+  }
+
+  .logo {
+    @apply h-16 p-4;
+  }
+}
