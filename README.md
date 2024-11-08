@@ -10,7 +10,7 @@
 
 ###
 
-<p align="left">1. Component layer: UI components are built: location Item, location list.<br>2. Service layer: it is for location service to get location data, which acts as a data-fetching layer of the application. it can be later replaced with the actual API calls from the location microservice.<br>3. Logic layer: it manages states like loading, location data shows...<br>4. If there is more time, Tailwind CSS should be used more accurate with proper designs.</p>
+<p align="left">1. Component layer: UI components are built: location Item, location list.<br>2. Service layer: it is for location service to get location data, which acts as a data-fetching layer of the application. it can be later replaced with the actual API calls from the location microservice.<br>3. Logic layer: it manages states like loading, location data shows...<br>4. If there is more time, Tailwind CSS should be used more accurate with proper designs. <br> For the project, tests are needed: Unit test for each component and function, E2E test to ensure that the application works as a whole.</p>
 
 ###
 
