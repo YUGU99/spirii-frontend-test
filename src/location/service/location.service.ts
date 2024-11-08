@@ -18,11 +18,8 @@ export const getLocationData = (
                     status ? location.status === status : true
                 );
 
-            // Calculate the total number of pages
             const totalItems = filteredLocations.length;
             const totalPages = Math.ceil(totalItems / itemsPerPage);
-
-            // Paginate the results
             const startIndex = (page - 1) * itemsPerPage;
             const paginatedLocations = filteredLocations.slice(startIndex, startIndex + itemsPerPage);
 

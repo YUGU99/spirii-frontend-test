@@ -44,13 +44,15 @@ const App: React.FC = () => {
     }, []);
 
     // Fetch data when search query, status filter, or page changes
+    //if more time, need to add a button to load more data
+    //can change the limit for each page
     useEffect(() => {
         const delayFetch = () => {
             if (debounceTimeout.current) {
                 clearTimeout(debounceTimeout.current);
             }
             debounceTimeout.current = setTimeout(() => {
-                setLocations([]); // Clear existing locations before fetching new ones
+                setLocations([]);
                 fetchData(searchQuery, statusFilter, 1); // Always fetch the first page
             }, 500); // Delay by 500ms to wait for user to stop typing
         };
@@ -67,9 +69,8 @@ const App: React.FC = () => {
     };
 
 
-    // Trigger data fetch when currentPage changes
     useEffect(() => {
-        if (currentPage === 1) return; // Don't call on initial render
+        if (currentPage === 1) return;
         fetchData(searchQuery, statusFilter, currentPage);
     }, [currentPage, searchQuery, statusFilter, fetchData]);
 
@@ -83,12 +84,12 @@ const App: React.FC = () => {
                     className="border p-2 rounded-md w-full sm:w-auto"
                     placeholder="Search by location name"
                     value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)} // Update search query
+                    onChange={(e) => setSearchQuery(e.target.value)}
                 />
                 <select
                     className="border p-2 rounded-md w-full sm:w-auto"
                     value={statusFilter}
-                    onChange={(e) => setStatusFilter(e.target.value)} // Update status filter
+                    onChange={(e) => setStatusFilter(e.target.value)}
                 >
                     <option value="">All Statuses</option>
                     <option value="Available">Available</option>
@@ -98,13 +99,13 @@ const App: React.FC = () => {
             </div>
 
             {loading && currentPage === 1 ? (
-                <div className="text-center">Loading...</div> // Show loading text while fetching data
+                <div className="text-center">Loading...</div>
             ) : (
-                <LocationList locations={locations} /> // Display the filtered location list
+                <LocationList locations={locations} />
             )}
 
             {loading && currentPage > 1 && (
-                <div className="text-center">Loading more...</div> // Show loading text for subsequent pages
+                <div className="text-center">Loading more...</div>
             )}
         </div>
     );
