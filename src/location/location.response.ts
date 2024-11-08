@@ -190,7 +190,26 @@ const locationResponse: { locations: LocationProps[] } =
                 maxPower: 11,
                 public: true,
                 type: "hubject"
-            }
+            },
+            {
+                locationId: 11,
+                address: {
+                    name: "Hegnsvej",
+                    street: "Hegnsvej 183s",
+                    zipCode: "2852",
+                    city: "Nærum",
+                    countryISO: "DK"
+                },
+                coordinates: {
+                    lat: 55.8111551,
+                    lon: 12.5431991
+                },
+                connectorType: "sType2",
+                status: "Suspended",
+                maxPower: 11,
+                public: false,
+                type: "spirii"
+            },
         ],
     };
 
